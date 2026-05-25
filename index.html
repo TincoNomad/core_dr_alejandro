@@ -3,116 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Alejandro Rivas - Gastroenterólogo Pediátrico</title>
+<title>Dr. Alejandro Rivas - Hepatología Pediátrica</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@400;700&display=swap" rel="stylesheet">
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Fahkwang', sans-serif; color: #000; background: #fff; }
+body { font-family: 'Fahkwang', sans-serif; color: #000; background: #f5f2ee; }
 a { text-decoration: none; color: inherit; }
 
 /* HEADER */
 .header {
   position: sticky; top: 0; z-index: 100;
-  background: #b9b2a8; color: #000;
+  background: #a79a90; color: #fff;
   display: flex; align-items: center; justify-content: space-between;
   padding: 10px 40px; min-height: 55px;
 }
 .header-logo { font-size: 42px; font-weight: 700; }
 .header-nav { display: flex; gap: 20px; font-size: 17px; }
-.header-nav a { color: #000; }
-.header-nav a:hover { color: #404040; }
-.header-cta { font-size: 15px; border: 1px solid #000; padding: 6px 20px; }
-.header-cta:hover { background: #000; color: #fff; }
+.header-nav a { color: #fff; }
+.header-nav a:hover { color: #ddd; }
+.header-cta {
+  font-size: 15px; border: 1px solid #fff; padding: 6px 20px;
+  color: #fff; background: transparent;
+}
+.header-cta:hover { background: #fff; color: #a79a90; }
 
 /* HERO */
 .hero {
-  position: relative;
-  min-height: 80vh;
+  position: relative; min-height: 85vh;
   display: flex; align-items: center;
+  margin-bottom: 80px;
   background: url('./index_files/4694e1_8be278ebbaba4911ab19370592650fc4~mv2.jpg') center/cover no-repeat;
 }
 .hero::before {
   content: ''; position: absolute; inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.55);
 }
 .hero-content {
   position: relative; z-index: 1;
-  padding: 80px; max-width: 900px;
-  color: #fff;
+  padding: 80px; max-width: 880px; color: #fff;
 }
-.hero h1 { font-size: 67px; line-height: 1.2; margin-bottom: 30px; }
-.hero p { font-size: 15px; line-height: 1.5; margin-bottom: 30px; max-width: 570px; }
+.hero h1 { font-size: 51px; line-height: 1.2; margin-bottom: 25px; }
+.hero p { font-size: 16px; line-height: 1.6; margin-bottom: 35px; max-width: 600px; }
 .hero-btn {
   display: inline-block; font-size: 16px;
-  border: 1px solid #fff; padding: 14px 30px; color: #fff;
+  border: 1px solid #fff; padding: 14px 34px; color: #fff;
 }
 .hero-btn:hover { background: #fff; color: #000; }
 
-/* SERVICES */
-.services {
-  background: #a79a90; color: #000;
-  padding: 115px 80px 80px;
+/* ABOUT */
+.about {
+  padding: 0;
 }
-.services-title {
-  font-size: 51px; text-align: center; margin-bottom: 60px;
+.about-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: flex; min-height: 500px;
 }
-.services-grid {
-  max-width: 980px; margin: 0 auto;
-  display: flex; flex-direction: column; gap: 0;
+.about-image {
+  flex: 1; position: relative;
+  background: url('./index_files/4694e1_8be278ebbaba4911ab19370592650fc4~mv2.jpg') center/cover no-repeat;
+  min-height: 400px;
 }
-.service-card {
-  display: flex; min-height: 610px;
+.about-image::before {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.5);
 }
-.service-card:nth-child(even) { flex-direction: row-reverse; }
-.service-img {
-  flex: 1; min-height: 610px;
-  background-size: cover; background-position: center;
-}
-.service-text {
+.about-text {
   flex: 1; display: flex; flex-direction: column; justify-content: center;
-  padding: 60px;
-  background: #404040; color: #fff;
+  padding: 80px; background: #f5f2ee;
 }
-.service-text h3 { font-size: 30px; margin-bottom: 22px; }
-.service-text .subtitle { font-size: 17px; margin-bottom: 15px; }
-.service-text p { font-size: 15px; line-height: 1.5; }
+.about h2 { font-size: 38px; margin-bottom: 24px; }
+.about p { font-size: 15px; line-height: 1.7; }
+
+/* CATALOG */
+.catalog {
+  background: #f5f2ee; padding: 100px 80px;
+}
+.catalog-title {
+  font-size: 38px; text-align: center; margin-bottom: 12px;
+}
+.catalog-sub {
+  font-size: 15px; text-align: center; color: #555; margin-bottom: 60px;
+}
+.catalog-grid {
+  max-width: 1020px; margin: 0 auto;
+  display: flex; flex-direction: column; gap: 40px;
+}
+.catalog-card {
+  position: relative; min-height: 320px;
+  display: flex; align-items: center; padding: 60px;
+  background-size: cover; background-position: center;
+  overflow: hidden;
+}
+.catalog-card::before {
+  content: ''; position: absolute; inset: 0;
+  background: rgba(0,0,0,0.55);
+}
+.catalog-card-content {
+  position: relative; z-index: 1;
+  display: flex; gap: 40px; align-items: center;
+  max-width: 860px;
+}
+.catalog-icon {
+  flex-shrink: 0; width: 90px; height: 90px;
+  background: rgba(255,255,255,0.2); border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+}
+.catalog-icon svg { width: 44px; height: 44px; fill: #fff; }
+.catalog-card-text { flex: 1; }
+.catalog-card-text h3 { font-size: 26px; margin-bottom: 10px; color: #fff; }
+.catalog-card-text p { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.85); }
+
+/* BENEFITS */
+.benefits {
+  background: #a79a90; padding: 100px 80px;
+}
+.benefits-title { font-size: 38px; text-align: center; margin-bottom: 60px; color: #fff; }
+.benefits-grid {
+  max-width: 1020px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px;
+}
+.benefit-card {
+  text-align: center; color: #fff;
+}
+.benefit-icon {
+  width: 70px; height: 70px; margin: 0 auto 20px;
+  background: rgba(255,255,255,0.2); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.benefit-icon svg { width: 32px; height: 32px; fill: #fff; }
+.benefit-card h3 { font-size: 20px; margin-bottom: 12px; }
+.benefit-card p { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.85); }
+
+/* CONTACT */
+.contact {
+  background: #f5f2ee; padding: 100px 80px;
+}
+.contact-title { font-size: 38px; text-align: center; margin-bottom: 12px; }
+.contact-sub { font-size: 15px; text-align: center; color: #555; margin-bottom: 50px; }
+.contact-inner {
+  max-width: 800px; margin: 0 auto;
+  display: flex; justify-content: center; gap: 50px; flex-wrap: wrap;
+}
+.contact-item {
+  text-align: center; min-width: 200px;
+}
+.contact-item-icon {
+  width: 56px; height: 56px; margin: 0 auto 14px;
+  background: #404040; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+.contact-item-icon svg { width: 26px; height: 26px; fill: #fff; }
+.contact-item h4 { font-size: 17px; margin-bottom: 5px; }
+.contact-item p, .contact-item a { font-size: 15px; color: #333; }
+.contact-item a { text-decoration: underline; }
+.contact-wa {
+  display: block; width: fit-content; margin: 50px auto 0;
+  background: #25D366; color: #fff; font-size: 17px;
+  padding: 16px 36px; border-radius: 40px;
+}
+.contact-wa:hover { background: #1da851; }
 
 /* FOOTER */
 .footer {
-  background: #b9b2a8; color: #000;
-  padding: 80px 40px 22px;
+  background: #a79a90; color: #fff;
+  padding: 60px 40px 24px;
 }
 .footer-inner {
-  max-width: 980px; margin: 0 auto;
+  max-width: 1020px; margin: 0 auto;
   display: flex; justify-content: space-between; gap: 40px;
 }
 .footer-left { flex: 1; }
-.footer-name { font-size: 42px; font-weight: 700; margin-bottom: 20px; }
-.footer-left p { font-size: 13px; margin-bottom: 5px; }
-.footer-social { display: flex; gap: 10px; margin-top: 20px; }
+.footer-name { font-size: 34px; font-weight: 700; margin-bottom: 16px; }
+.footer-left p { font-size: 13px; margin-bottom: 4px; line-height: 1.5; }
+.footer-social { display: flex; gap: 12px; margin-top: 18px; }
 .footer-social a { display: block; }
-.footer-social img { width: 25px; height: 25px; }
-.footer-right { flex: 1; }
-.footer-right h4 { font-size: 21px; margin-bottom: 14px; }
-.footer-right a { display: block; font-size: 15px; margin-bottom: 5px; text-decoration: underline; }
+.footer-social img { width: 24px; height: 24px; }
+.footer-right { flex: 1; max-width: 400px; }
+.footer-right h4 { font-size: 17px; margin-bottom: 10px; }
+.footer-right p { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.85); }
 .footer-copy {
-  max-width: 980px; margin: 40px auto 0;
-  font-size: 13px; text-align: center;
+  max-width: 1020px; margin: 36px auto 0; padding-top: 20px;
+  border-top: 1px solid rgba(0,0,0,0.15);
+  font-size: 12px; text-align: center; color: rgba(255,255,255,0.7);
 }
 
 @media (max-width: 768px) {
   .header { flex-direction: column; gap: 10px; padding: 10px 20px; }
   .header-nav { flex-wrap: wrap; justify-content: center; }
   .hero-content { padding: 40px 20px; }
-  .hero h1 { font-size: 36px; }
-  .service-card { flex-direction: column !important; }
-  .service-img { min-height: 300px; }
-  .service-text { padding: 30px; }
-  .services { padding: 60px 20px; }
-  .services-title { font-size: 32px; }
-  .footer-inner { flex-direction: column; }
+  .hero h1 { font-size: 30px; }
+  .about-inner { flex-direction: column; }
+  .about-image { min-height: 300px; width: 100%; }
+  .about-text { padding: 40px 20px; text-align: center; }
+  .about h2 { font-size: 28px; }
+  .catalog { padding: 60px 20px; }
+  .catalog-title { font-size: 28px; }
+  .catalog-card { padding: 30px 20px; min-height: 250px; }
+  .catalog-card-content { flex-direction: column; text-align: center; }
+  .benefits { padding: 60px 20px; }
+  .benefits-title { font-size: 28px; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .contact { padding: 60px 20px; }
+  .contact-title { font-size: 28px; }
+  .contact-inner { flex-direction: column; align-items: center; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-social { justify-content: center; }
 }
 </style>
 </head>
@@ -123,53 +220,134 @@ a { text-decoration: none; color: inherit; }
   <div class="header-logo"><a href="./">Dr. Alejandro Rivas</a></div>
   <nav class="header-nav">
     <a href="./">Inicio</a>
-    <a href="#servicios">Servicios</a>
+    <a href="#catalogo">Catálogo</a>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#contacto">Contacto</a>
   </nav>
-  <a class="header-cta" href="#servicios">Contáctanos</a>
+  <a class="header-cta" href="#catalogo">Adquirir material</a>
 </header>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>BIENVENIDO A</h1>
-    <p>El sitio web del Dr. Alejandro Rivas, gastroenterólogo pediátrico y hepatólogo, donde la salud infantil es nuestra prioridad.</p>
-    <a class="hero-btn" href="#servicios">Saber más</a>
+    <h1>Herramientas Clínicas Especializadas en Hepatología Pediátrica</h1>
+    <p>Recursos de actualización, apoyo al diagnóstico y toma de decisiones diseñados exclusivamente para médicos y profesionales de la salud.</p>
+    <a class="hero-btn" href="#catalogo">Ver catálogo de recursos</a>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section id="servicios" class="services">
-  <h2 class="services-title">NUESTROS SERVICIOS MÉDICOS</h2>
-  <div class="services-grid">
+<!-- ABOUT -->
+<section id="sobre-mi" class="about">
+  <div class="about-inner">
+    <div class="about-image"></div>
+    <div class="about-text">
+      <h2>Respaldado por la experiencia clínica</h2>
+      <p>Soy el Dr. Alejandro Rivas, médico especialista en Hepatología Pediátrica. He desarrollado y sintetizado esta biblioteca de recursos con el objetivo de brindar a mis colegas herramientas prácticas, actualizadas y basadas en la evidencia. Mi propósito es facilitar el acceso a información vital que optimice tus tiempos de atención y fortalezca el apoyo al diagnóstico en tu práctica clínica diaria.</p>
+    </div>
+  </div>
+</section>
 
-    <div class="service-card">
-      <div class="service-img" style="background-image: url('./index_files/4694e1_f23c640d755f421fa9ef48a72e8e0fee~mv2.jpg');"></div>
-      <div class="service-text">
-        <h3>Consulta</h3>
-        <p class="subtitle">Atención Especializada</p>
-        <p>Ofrecemos consultas personalizadas para evaluar y tratar enfermedades gastrointestinales y hepáticas en niños. Nuestro enfoque se basa en la experiencia y la empatía.</p>
+<!-- CATALOG -->
+<section id="catalogo" class="catalog">
+  <h2 class="catalog-title">¿Qué incluye nuestra biblioteca médica?</h2>
+  <p class="catalog-sub">Material de consulta rápida para el consultorio o la guardia</p>
+  <div class="catalog-grid">
+
+    <div class="catalog-card" style="background-image: url('./index_files/4694e1_f23c640d755f421fa9ef48a72e8e0fee~mv2.jpg');">
+      <div class="catalog-card-content">
+        <div class="catalog-icon">
+          <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        </div>
+        <div class="catalog-card-text">
+          <h3>Fichas Rápidas</h3>
+          <p>Resúmenes precisos con la información clínica más relevante de patologías hepáticas pediátricas, ideales para consultas veloces.</p>
+        </div>
       </div>
     </div>
 
-    <div class="service-card">
-      <div class="service-img" style="background-image: url('./index_files/4694e1_2e625c062c564dff945cac4fe6402359~mv2.jpg');"></div>
-      <div class="service-text">
-        <h3>Diagnóstico</h3>
-        <p class="subtitle">Tecnología Avanzada</p>
-        <p>Utilizamos las últimas tecnologías y métodos de diagnóstico para identificar problemas de salud. La precisión es clave para un tratamiento efectivo en nuestros pacientes más jóvenes.</p>
+    <div class="catalog-card" style="background-image: url('./index_files/4694e1_2e625c062c564dff945cac4fe6402359~mv2.jpg');">
+      <div class="catalog-card-content">
+        <div class="catalog-icon">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 10h2v7H7zm4-3h2v10h-2zm4 6h2v4h-2z"/></svg>
+        </div>
+        <div class="catalog-card-text">
+          <h3>Guías y Consensos</h3>
+          <p>Documentos sintetizados que reúnen las normativas y protocolos internacionales más recientes para el manejo de pacientes.</p>
+        </div>
       </div>
     </div>
 
-    <div class="service-card">
-      <div class="service-img" style="background-image: url('./index_files/4694e1_758e29c1a8ef4ed29e99a9388acffd62~mv2.jpg');"></div>
-      <div class="service-text">
-        <h3>Tratamiento</h3>
-        <p class="subtitle">Cuidados Integrales</p>
-        <p>Proporcionamos planes de tratamiento adaptados a las necesidades individuales de cada niño, asegurando un enfoque integral para su bienestar y recuperación.</p>
+    <div class="catalog-card" style="background-image: url('./index_files/4694e1_758e29c1a8ef4ed29e99a9388acffd62~mv2.jpg');">
+      <div class="catalog-card-content">
+        <div class="catalog-icon">
+          <svg viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+        </div>
+        <div class="catalog-card-text">
+          <h3>Tablas de Diagnóstico Diferencial</h3>
+          <p>Esquemas claros y estructurados para facilitar la evaluación clínica, descartar patologías y llegar a diagnósticos certeros.</p>
+        </div>
       </div>
     </div>
 
   </div>
+</section>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <h2 class="benefits-title">Apoyo diagnóstico al alcance de tu mano</h2>
+  <div class="benefits-grid">
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 4V1L8 5l4 4V6c3.31 0 6 2.69 6 6 0 1.01-.25 1.97-.7 2.8l1.46 1.46C19.54 15.03 20 13.57 20 12c0-4.42-3.58-8-8-8zm0 14c-3.31 0-6-2.69-6-6 0-1.01.25-1.97.7-2.8L5.24 7.74C4.46 8.97 4 10.43 4 12c0 4.42 3.58 8 8 8v3l4-4-4-4v3z"/></svg>
+      </div>
+      <h3>Actualización Constante</h3>
+      <p>Material basado en la literatura médica y consensos globales más recientes.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+      </div>
+      <h3>Ahorro de Tiempo</h3>
+      <p>Información digerida y estructurada para ir directo al punto durante la atención al paciente.</p>
+    </div>
+    <div class="benefit-card">
+      <div class="benefit-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+      </div>
+      <h3>Precisión Clínica</h3>
+      <p>Reduce el margen de error con tablas diferenciales elaboradas por un especialista en el área.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contacto" class="contact">
+  <h2 class="contact-title">¿Necesitas más información sobre el material?</h2>
+  <p class="contact-sub">Si tienes dudas sobre el contenido de las guías o fichas, escríbenos.</p>
+  <div class="contact-inner">
+    <div class="contact-item">
+      <div class="contact-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+      </div>
+      <h4>WhatsApp Médico</h4>
+      <a href="https://wa.me/51978345558" target="_blank">+51 978 345 558</a>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+      </div>
+      <h4>Correo Electrónico</h4>
+      <a href="mailto:aula360@core.com.pe">aula360@core.com.pe</a>
+    </div>
+    <div class="contact-item">
+      <div class="contact-item-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+      </div>
+      <h4>Ubicación</h4>
+      <p>Lima, Perú</p>
+    </div>
+  </div>
+  <a class="contact-wa" href="https://wa.me/51978345558" target="_blank">Escribir por WhatsApp</a>
 </section>
 
 <!-- FOOTER -->
@@ -177,24 +355,24 @@ a { text-decoration: none; color: inherit; }
   <div class="footer-inner">
     <div class="footer-left">
       <div class="footer-name"><a href="./">Dr. Alejandro Rivas</a></div>
-      <p>52-1-33-12345678</p>
-      <p>info@sitio.com</p>
-      <p>Av. Cobá 202, Cancún, Q.R., México</p>
+      <p>+51 978 345 558</p>
+      <p>aula360@core.com.pe</p>
+      <p>Lima, Perú</p>
       <div class="footer-social">
         <a href="https://www.facebook.com/wix" target="_blank"><img src="./index_files/64a918_d9471de294d741f48b2e2b25d078e7a8~mv2.png" alt="Facebook"></a>
         <a href="https://www.instagram.com/wix" target="_blank"><img src="./index_files/64a918_8f522ffdce4e48b09136b1486bb2822a~mv2.png" alt="Instagram"></a>
-        <a href="https://x.com/wix" target="_blank"><img src="./index_files/2e2a49_e38ff9c38b8e41bb8422e115dc67df4a~mv2.png" alt="X"></a>
-        <a href="https://www.tiktok.com/@wix" target="_blank"><img src="./index_files/2e2a49_aaa72a7b672b4ade9ee8643cee872256~mv2.png" alt="TikTok"></a>
+        <a href="https://wa.me/51978345558" target="_blank">
+          <svg viewBox="0 0 24 24" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" fill="#fff"/></svg>
+        </a>
       </div>
     </div>
     <div class="footer-right">
-      <h4>Información Adicional</h4>
-      <a href="#">Política de Privacidad</a>
-      <a href="#">Declaración de Accesibilidad</a>
+      <h4>Aviso Legal</h4>
+      <p>Este material está diseñado estrictamente como apoyo al diagnóstico y actualización para profesionales de la salud. No reemplaza el juicio clínico del médico tratante.</p>
     </div>
   </div>
   <div class="footer-copy">
-    © 2035 by Dr. Alejandro Rivas. Powered and secured by <a href="https://www.wix.com/" target="_blank" style="text-decoration:underline;">Wix</a>
+    © 2025 Dr. Alejandro Rivas. Todos los derechos reservados.
   </div>
 </footer>
 
